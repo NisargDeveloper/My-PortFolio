@@ -29,6 +29,7 @@ let interval1 = setInterval(() => {
   if(counter > paragraph.length) {
     clearInterval(interval1)
   para.appendChild(nameSpan);
+  
     let interval2 = setInterval(() => {
       nameOfUser.slice(0, secondcounter);
       nameSpan.innerText = nameOfUser.slice(0, secondcounter); 
@@ -39,6 +40,7 @@ let interval1 = setInterval(() => {
         const interval3 = setInterval(() => {
           // console.log("This")
           para.appendChild(nameSpan2);
+          nameSpan2.setAttribute('id', 'myDetails');
         nameSpan2.innerText = secondPara.slice(0, thirdcounter);
         thirdcounter++;
         if(thirdcounter > secondPara.length) {

@@ -302,4 +302,84 @@ body {
 }
 
 
+/*Mobile Version*/
+@media (max-width: 500px) {
+  .navbar {
+    flex-direction: row;
+    height: auto;
+    position: static;
+    padding: 10px;
+  }
+
+  .main-logo {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .main-logo p {
+    margin-left: 10px;
+    opacity: 1;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+  }
+
+  .right-nav {
+    display: none;
+  }
+
+  .right-nav li {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .about {
+    margin-left: 0;
+  }
+
+  .portfolio {
+    margin-left: 0;
+  }
+
+  .skills-heading {
+    margin-left: 0;
+  }
+
+  .skills-details {
+    margin-left: 0;
+  }
+
+  .contact {
+    margin-left: 0;
+  }
+
+  .projects {
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #para {
+    margin-left: 0;
+    width: -webkit-fill-available;
+    font-size: 74px;
+    word-wrap: break-word;
+    text-align: center;
+  }
+
+  #mydetails {
+    margin-left: 0;
+  }
+}
+
+
 

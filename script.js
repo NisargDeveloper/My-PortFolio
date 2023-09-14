@@ -8,7 +8,7 @@ let nameSpan2 = document.createElement("span");
 let nameOfUser = "Nisarg"
 let newText = nameSpan.innerText;
 let paragraph = "Hi! My name is "
-let secondPara = " and I'm Front-End Developer."
+let secondPara = " and I'm a Front-End Developer."
 // nameSpan.appendChild(node);
 nameSpan.style.color = "red"
 // let name = document.getElementById("test").innerText;

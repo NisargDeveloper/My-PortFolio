@@ -7,13 +7,8 @@ let nameSpan2 = document.createElement("span");
 // const node = document.createTextNode("Nisarg");
 let nameOfUser = "Nisarg";
 let newText = nameSpan.innerText;
-<<<<<<< HEAD
 let paragraph = "Hi! My name is ";
-let secondPara = " and I'm Front-End Developer.";
-=======
-let paragraph = "Hi! My name is "
-let secondPara = " and I'm a Front-End Developer."
->>>>>>> fc2b1b8408cd5ae7f4ae67173ae899335a6391d3
+let secondPara = " and I'm a Front-End Developer.";
 // nameSpan.appendChild(node);
 nameSpan.style.color = "red";
 // let name = document.getElementById("test").innerText;
@@ -85,7 +80,6 @@ navlinks.forEach((links) => {
     mouseCursor.classList.add("link-grow");
     links.classList.add("hovered-Changed");
     // para.classList.add('para-changed');
-<<<<<<< HEAD
   });
 
   links.addEventListener("mouseleave", () => {
@@ -93,13 +87,3 @@ navlinks.forEach((links) => {
     links.classList.remove("hovered-Changed");
   });
 });
-=======
-  })
-  
-  links.addEventListener('mouseleave', () => {
-    mouseCursor.classList.remove('link-grow')
-    links.classList.remove('hovered-Changed')
-  })
-})
-  
->>>>>>> fc2b1b8408cd5ae7f4ae67173ae899335a6391d3

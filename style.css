@@ -313,7 +313,8 @@ body {
   /* Styles for mobile phones go here */
   .navbar {
     overflow: hidden;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
     height: auto;
     position: static;
     padding: 10px;

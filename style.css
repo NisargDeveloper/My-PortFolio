@@ -179,6 +179,9 @@ body {
   width: 300px;
   height: 337px;
   position: relative;
+  margin-top: 24px;
+  border: 1px solid white;
+  
 }
 
 .portfolio-name {
@@ -319,9 +322,12 @@ body {
 
   .main-logo {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding: 10px;
+  }
+
+  .socials {
+    display: flex;
   }
 
   .main-logo p {
@@ -390,16 +396,6 @@ body {
   #mydetails {
     margin-left: 0;
   }
-}
-
-/* Tablets */
-@media (min-width: 601px) and (max-width: 768px) {
-  /* Styles for tablets go here */
-}
-
-/* Small Desktops and Laptops */
-@media (min-width: 769px) and (max-width: 992px) {
-  /* Styles for small desktops and laptops go here */
 }
 
 /* Medium Desktops and Laptops */
@@ -985,10 +981,10 @@ body {
 
 @media (max-width: 360px) {
   #para {
-    font-size: 69px;
+    font-size: 50px;
   }
 
-  .portfolio {
-    padding-top: 120px;
+  .skills-heading, .portfolio-name, .contact-heading {
+    font-size: 46px;
   }
 }

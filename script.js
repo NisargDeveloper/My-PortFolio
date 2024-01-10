@@ -8,7 +8,7 @@ let nameSpan2 = document.createElement("span");
 let nameOfUser = "Nisarg";
 let newText = nameSpan.innerText;
 let paragraph = "Hi! My name is ";
-let secondPara = " and I'm a Front-End Developer.";
+let secondPara = " and I'm a Full Stack Developer.";
 // nameSpan.appendChild(node);
 nameSpan.style.color = "red";
 // let name = document.getElementById("test").innerText;
@@ -49,11 +49,11 @@ let interval1 = setInterval(() => {
             return;
             // clearInterval(interval)
           }
-        }, 200);
+        }, 60);
       }
-    }, 200);
+    }, 60);
   }
-}, 100);
+}, 30);
 
 // Script for customised cursor
 

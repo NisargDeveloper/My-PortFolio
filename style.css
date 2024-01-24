@@ -10,6 +10,7 @@
 body {
   height: 300vh;
   cursor: none;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -241,7 +242,7 @@ body {
 .contact {
   background: #000000db;
   height: max-content;
-  margin-left: 280px;
+  margin-left: 278px;
 }
 
 .contact-heading {
@@ -635,7 +636,7 @@ body {
   .contact {
     background: #000000db;
     height: max-content;
-    margin-left: 280px;
+    margin-left: 278px;
   }
 
   .contact-heading {

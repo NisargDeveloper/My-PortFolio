@@ -4,19 +4,13 @@ let navlinks = document.querySelectorAll(".inner-nav");
 let nameSpan = document.createElement("span");
 nameSpan.classList.add("nameElement");
 let nameSpan2 = document.createElement("span");
-// const node = document.createTextNode("Nisarg");
 let nameOfUser = "Nisarg";
 let newText = nameSpan.innerText;
 let paragraph = "Hi! My name is ";
 let secondPara = " and I'm a Full Stack Developer.";
-// nameSpan.appendChild(node);
 nameSpan.style.color = "red";
-// let name = document.getElementById("test").innerText;
 
-// name.style.color = "red"
 console.log(para);
-// let paragraph = para.innerText;
-// let name = "Nisarg";
 let secondcounter = 1;
 let thirdcounter = 1;
 let counter = 1;
@@ -38,7 +32,6 @@ let interval1 = setInterval(() => {
       if (secondcounter > nameOfUser.length) {
         clearInterval(interval2);
         const interval3 = setInterval(() => {
-          // console.log("This")
           para.appendChild(nameSpan2);
           nameSpan2.setAttribute("id", "myDetails");
           nameSpan2.innerText = secondPara.slice(0, thirdcounter);
@@ -47,7 +40,6 @@ let interval1 = setInterval(() => {
             clearInterval(interval3);
             console.log("Hi");
             return;
-            // clearInterval(interval)
           }
         }, 60);
       }
@@ -79,7 +71,6 @@ navlinks.forEach((links) => {
   links.addEventListener("mouseover", () => {
     mouseCursor.classList.add("link-grow");
     links.classList.add("hovered-Changed");
-    // para.classList.add('para-changed');
   });
 
   links.addEventListener("mouseleave", () => {

@@ -27,6 +27,21 @@ body {
   position: fixed;
 }
 
+.download-resume {
+  background-color: gray;
+  padding: 20px 56px;
+  cursor: none;
+  text-decoration: none;
+  color: white;
+  margin-top: 28px;
+  transition: all 250ms ease-in-out;
+}
+
+.download-resume:hover {
+  color: rgb(8, 253, 216);
+  background-color: black;
+}
+
 .main-logo {
   display: flex;
   flex-direction: column;
@@ -317,7 +332,8 @@ body {
     padding-top: 100px;
     padding-bottom: 30px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
   }
   

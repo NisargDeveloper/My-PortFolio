@@ -13,6 +13,10 @@ body {
   overflow-x: hidden;
 }
 
+.form {
+  padding-bottom: 100px;
+}
+
 .navbar {
   background-color: black;
   justify-content: space-between;
@@ -318,8 +322,8 @@ body {
   }
   
   .skills-icon img {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
   }
 }
 
@@ -1052,13 +1056,14 @@ body {
     padding-top: 100px;
     padding-bottom: 30px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
   }
   
   .skills-icon img {
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
   }
 
   #para {

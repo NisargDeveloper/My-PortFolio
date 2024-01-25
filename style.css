@@ -307,6 +307,20 @@ body {
   #para {
     font-size: 60px;
   }
+  .skills-icon {
+    background: #000000db;
+    /* margin-left: 270px; */
+    padding-top: 100px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .skills-icon img {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 /* Mobile Phones */

@@ -312,6 +312,21 @@ body {
 /* Mobile Phones */
 @media (max-width: 900px) {
   /* Styles for mobile phones go here */
+
+  .skills-icon {
+    background: #000000db;
+    /* margin-left: 270px; */
+    padding-top: 100px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .skills-icon img {
+    width: 150px;
+    height: 150px;
+  }
   .navbar {
     overflow: hidden;
     display: flex;
@@ -403,6 +418,20 @@ body {
 /* Medium Desktops and Laptops */
 @media (min-width: 900px) and (max-width: 1200px) {
   /* Styles for medium desktops and laptops go here */
+  .skills-icon {
+    background: #000000db;
+    margin-left: 270px;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .skills-icon img {
+    width: 150px;
+    height: 150px;
+  }
   .navbar {
     background-color: black;
     justify-content: space-between;
@@ -692,9 +721,29 @@ body {
   }
 }
 
+
+
 /* Large Desktops and Laptops */
 @media (min-width: 1201px) {
   /* Styles for large desktops and laptops go here */
+
+  .skills-icon {
+    background: #000000db;
+    margin-left: 270px;
+    padding-top: 100px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .skills-icon img {
+    width: 150px;
+    height: 150px;
+  }
+  
+  
+
   .navbar {
     background-color: black;
     justify-content: space-between;
@@ -982,6 +1031,22 @@ body {
 }
 
 @media (max-width: 360px) {
+
+  .skills-icon {
+    background: #000000db;
+    /* margin-left: 270px; */
+    padding-top: 100px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .skills-icon img {
+    width: 150px;
+    height: 150px;
+  }
+
   #para {
     font-size: 50px;
   }

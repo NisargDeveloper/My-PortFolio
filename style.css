@@ -9,8 +9,6 @@
 
 body {
   height: 300vh;
-  cursor: none;
-  overflow-x: hidden;
 }
 
 .form {
@@ -74,10 +72,6 @@ nav {
   font-size: 23px;
 }
 
-/* .right-nav li:last-child {
-  padding-right: 30px;
-} */
-
 .right-nav a {
   text-decoration: none;
   color: whitesmoke;
@@ -86,10 +80,6 @@ nav {
   color: #08fdd8;
   opacity: 1;
   transition: 300ms all ease-in-out;
-}
-
-body {
-  /* background-color: red; */
 }
 
 .socials {
@@ -115,7 +105,6 @@ body {
 .about {
   color: white;
   font-size: 70px;
-  padding-left: 276px;
   background-color: #000000db;
   height: 100vh;
   z-index: 0;
@@ -128,24 +117,6 @@ body {
 #para {
   z-index: 100;
   position: absolute;
-}
-
-/* Changed Cursor */
-
-.cursor {
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid white;
-  border-radius: 50%;
-  position: absolute;
-  transform: translate(-50%, -50%) scale(1);
-  transition: all 0.1s ease;
-  z-index: 1;
-}
-
-.link-grow {
-  background-color: rgba(255, 255, 255, 0.218);
-  transform: translate(-50%, -50%) scale(2);
 }
 
 .inner-nav {
@@ -165,7 +136,6 @@ body {
 /* Second Page */
 
 .portfolio {
-  margin-left: 200px;
   color: white;
   background: #000000db;
   text-align: center;
@@ -184,7 +154,6 @@ body {
 
 .projects {
   position: relative;
-  margin-left: 100px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -243,24 +212,29 @@ body {
 }
 
 .skills-heading {
-  padding-top: 150px;
+  /* padding-top: 150px; */
   font-size: 70px;
-  padding-bottom: 100px;
+  padding-bottom: 40px;
   color: #08fdd8;
   text-align: center;
-  margin-left: 270px;
 }
 
 .skills-details {
-  margin-left: 300px;
   font-size: 20px;
   /* text-align: center; */
+}
+
+.resume-container {
+  width: 100%; 
+  height: 100%; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
 }
 
 .contact {
   background: #000000db;
   height: max-content;
-  margin-left: 278px;
 }
 
 .contact-heading {
@@ -677,9 +651,9 @@ body {
   }
 
   .skills-heading {
-    padding-top: 150px;
+    /* padding-top: 150px; */
     font-size: 70px;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
     color: #08fdd8;
     text-align: center;
     margin-left: 270px;
@@ -758,11 +732,13 @@ body {
 
 /* Large Desktops and Laptops */
 @media (min-width: 1201px) {
-  /* Styles for large desktops and laptops go here */
+
+  .main-body {
+    margin-left: 300px;
+  }
 
   .skills-icon {
     background: #000000db;
-    margin-left: 270px;
     padding-top: 100px;
     padding-bottom: 30px;
     display: flex;
@@ -774,15 +750,13 @@ body {
     width: 150px;
     height: 150px;
   }
-  
-  
 
   .navbar {
     background-color: black;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
-    width: max-content;
+    width: 300px;
     height: 100vh;
     position: fixed;
   }
@@ -808,7 +782,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: aqua; */
     list-style: none;
     height: 100%;
     opacity: 0.7;
@@ -818,10 +791,6 @@ body {
   .right-nav li {
     font-size: 23px;
   }
-
-  /* .right-nav li:last-child {
-    padding-right: 30px;
-  } */
 
   .right-nav a {
     text-decoration: none;
@@ -833,10 +802,6 @@ body {
     transition: 300ms all ease-in-out;
   }
 
-  body {
-    /* background-color: red; */
-  }
-
   .socials {
     display: flex;
     align-items: center;
@@ -845,7 +810,6 @@ body {
 
   .socials ion-icon {
     font-size: 30px;
-    /* cursor: pointer; */
     color: white;
     padding: 10px;
   }
@@ -855,12 +819,9 @@ body {
     transition: all 250ms ease-in-out;
   }
 
-  /* about section */
-
   .about {
     color: white;
     font-size: 70px;
-    padding-left: 276px;
     background-color: #000000db;
     height: 100vh;
     z-index: 0;
@@ -876,25 +837,6 @@ body {
     position: absolute;
   }
 
-  /* Changed Cursor */
-
-  .cursor {
-    width: 3rem;
-    height: 3rem;
-    border: 2px solid white;
-    border-radius: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-    transition: all 0.1s ease;
-    z-index: 1;
-  }
-
-  .link-grow {
-    background-color: rgba(255, 255, 255, 0.218);
-    transform: scale(3);
-  }
-
   .inner-nav {
     z-index: 100;
     position: relative;
@@ -903,11 +845,6 @@ body {
 
   .hovered-Changed {
     color: rgb(183, 70, 70);
-  }
-  #test {
-    color: red;
-    box-shadow: inset blueviolet;
-    letter-spacing: normal;
   }
   /* Second Page */
 
@@ -931,7 +868,6 @@ body {
 
   .projects {
     position: relative;
-    margin-left: 100px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -987,18 +923,15 @@ body {
   }
 
   .skills-heading {
-    padding-top: 150px;
     font-size: 70px;
-    padding-bottom: 100px;
     color: #08fdd8;
     text-align: center;
-    margin-left: 270px;
   }
+  
   .skills-details-container {
-    padding-left: 30px;
+    margin-left: 50px;
   }
   .skills-details {
-    margin-left: 300px;
     font-size: 20px;
     padding-bottom: 20px;
     /* text-align: center; */
@@ -1007,7 +940,6 @@ body {
   .contact {
     background: #000000db;
     height: max-content;
-    margin-left: 280px;
   }
 
   .contact-heading {

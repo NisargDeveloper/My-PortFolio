@@ -1,80 +1,73 @@
-let container = document.getElementById("about");
-let para = document.getElementById("para");
-let navlinks = document.querySelectorAll(".inner-nav");
-let nameSpan = document.createElement("span");
-nameSpan.classList.add("nameElement");
-let nameSpan2 = document.createElement("span");
-let nameOfUser = "Nisarg";
-let newText = nameSpan.innerText;
-let paragraph = "Hi! My name is ";
-let secondPara = " and I'm a Full Stack Developer.";
-nameSpan.style.color = "red";
+document.addEventListener("DOMContentLoaded", () => {
+  let para = document.getElementById("para");
+  let navlinks = document.querySelectorAll(".inner-nav");
 
-console.log(para);
-let secondcounter = 1;
-let thirdcounter = 1;
-let counter = 1;
+  let nameSpan = document.createElement("span");
+  nameSpan.classList.add("nameElement");
+  nameSpan.style.color = "red";
 
-let interval1 = setInterval(() => {
-  paragraph.slice(0, counter);
-  para.innerText = paragraph.slice(0, counter);
-  counter++;
+  let nameSpan2 = document.createElement("span");
 
-  if (counter > paragraph.length) {
-    clearInterval(interval1);
-    para.appendChild(nameSpan);
+  let nameOfUser = "Nisarg";
+  let paragraph = "Hi! My name is ";
+  let secondPara = " and I'm a Full Stack Developer.";
 
-    let interval2 = setInterval(() => {
-      nameOfUser.slice(0, secondcounter);
-      nameSpan.innerText = nameOfUser.slice(0, secondcounter);
-      secondcounter++;
-
-      if (secondcounter > nameOfUser.length) {
-        clearInterval(interval2);
-        const interval3 = setInterval(() => {
-          para.appendChild(nameSpan2);
-          nameSpan2.setAttribute("id", "myDetails");
-          nameSpan2.innerText = secondPara.slice(0, thirdcounter);
-          thirdcounter++;
-          if (thirdcounter > secondPara.length) {
-            clearInterval(interval3);
-            console.log("Hi");
-            return;
-          }
-        }, 60);
+  // Function to animate text typing
+  function typeText(target, text, callback, delay = 50) {
+    let index = 0;
+    let interval = setInterval(() => {
+      target.innerText = text.slice(0, index);
+      index++;
+      if (index > text.length) {
+        clearInterval(interval);
+        if (callback) callback();
       }
-    }, 60);
+    }, delay);
   }
-}, 30);
 
-// Script for customised cursor
+  // Start text typing effect
+  typeText(para, paragraph, () => {
+    para.appendChild(nameSpan);
+    typeText(nameSpan, nameOfUser, () => {
+      para.appendChild(nameSpan2);
+      nameSpan2.setAttribute("id", "myDetails");
+      typeText(nameSpan2, secondPara, () => {
+        console.log("Typing animation complete!");
+      }, 60);
+    }, 60);
+  }, 30);
 
-let mouseCursor = document.querySelector(".cursor");
+  // Smooth Custom Cursor with Scroll Support
+  let mouseCursor = document.getElementById("cursor");
 
-window.addEventListener("mousemove", cursor);
+  let mouseX = 0, mouseY = 0;
+  let cursorX = 0, cursorY = 0;
 
-function cursor(e) {
-  mouseCursor.style.top = e.pageY + "px";
-  mouseCursor.style.left = e.pageX + "px";
-}
+  const cursorSize = 20; // Same as cursor width & height in CSS
 
-para.addEventListener("mouseover", () => {
-  mouseCursor.classList.add("link-grow");
-  para.classList.add("para-changed");
-});
-
-para.addEventListener("mouseleave", () => {
-  mouseCursor.classList.remove("link-grow");
-});
-
-navlinks.forEach((links) => {
-  links.addEventListener("mouseover", () => {
-    mouseCursor.classList.add("link-grow");
-    links.classList.add("hovered-Changed");
+  window.addEventListener("mousemove", (e) => {
+    mouseX = e.pageX - cursorSize / 2; // Offset for centering cursor
+    mouseY = e.pageY - cursorSize / 2;
   });
 
-  links.addEventListener("mouseleave", () => {
-    mouseCursor.classList.remove("link-grow");
-    links.classList.remove("hovered-Changed");
+  function animateCursor() {
+    cursorX += (mouseX - cursorX) * 0.2; // Smooth easing
+    cursorY += (mouseY - cursorY) * 0.2;
+
+    mouseCursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) scale(1)`;
+    requestAnimationFrame(animateCursor);
+  }
+
+  animateCursor(); // Start smooth cursor movement
+
+  // Add hover effects
+  document.querySelectorAll(".inner-nav, #para").forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      mouseCursor.classList.add("link-grow");
+    });
+
+    element.addEventListener("mouseleave", () => {
+      mouseCursor.classList.remove("link-grow");
+    });
   });
 });

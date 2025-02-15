@@ -138,15 +138,14 @@ body {
   border: 2px solid white;
   border-radius: 50%;
   position: absolute;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
+  transform: translate(-50%, -50%) scale(1);
   transition: all 0.1s ease;
   z-index: 1;
 }
 
 .link-grow {
   background-color: rgba(255, 255, 255, 0.218);
-  transform: scale(3);
+  transform: translate(-50%, -50%) scale(2);
 }
 
 .inner-nav {
